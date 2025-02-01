@@ -1,43 +1,36 @@
 let counterElement = document.getElementById("counterValue");
-
-function onIncrement() {
-  let previousCounterValue = counterElement.textContent;
-  let updatedCounterValue = parseInt(previousCounterValue) + 1;
-  if (updatedCounterValue > 0) {
-    counterElement.style.color = "green";
-  }
-  else if (updatedCounterValue < 0) {
-    counterElement.style.color = "red";
-  }
-  else {
-    counterElement.style.color = "black";
-  }
-  counterElement.textContent = updatedCounterValue;
+function onIncrement(){
+    let previousCounter = counterElement.textContent;
+    let updatedCounter = parseInt(previousCounter)+1;
+    counterElement.textContent = updatedCounter;
+    if (updatedCounter>0){
+        counterElement.style.color="green";
+    }
+    else if (updatedCounter<0){
+        counterElement.style.color="red";
+    }
+    else{
+        counterElement.style.color="black";
+    }
+    
 }
-
+function onDecrement(){
+    let previousCounter = counterElement.textContent;
+    let updatedCounter = parseInt(previousCounter)-1;
+    counterElement.textContent = updatedCounter;
+    if (updatedCounter>0){
+        counterElement.style.color="green";
+    }
+    else if (updatedCounter<0){
+        counterElement.style.color="red";
+    }
+    else{
+        counterElement.style.color="black";
+    }
+    
+}
 function onReset(){
-  counterElement.textContent = 0;
-  counterElement.style.color = "black";
-
-}
-
-function onDecrement() {
-  let previousCounterValue = counterElement.textContent;
-  let updatedCounterValue = parseInt(previousCounterValue) - 1;
-  if (updatedCounterValue > 0) {
-    counterElement.style.color = "green";
-  }
-  else if (updatedCounterValue < 0) {
-    counterElement.style.color = "red";
-  }
-  else {
-    counterElement.style.color = "black";
-  }
-  counterElement.textContent = updatedCounterValue;
-}
-
-function onReset() {
-  let counterValue = 0;
-  counterElement.textContent = counterValue;
-  counterElement.style.color = "black";
+    let previousCounter = 0 ;
+    counterElement.textContent= previousCounter;
+    counterElement.style.color="black";
 }

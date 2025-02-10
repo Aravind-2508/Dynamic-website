@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    50% {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+    }
+    100% {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: #e0e0e0;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #d4d4d4;
+}
+
+.cell.clicked {
+    animation: cellBounce 0.5s ease-in-out;
+}
+
+@keyframes cellBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="t.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Time Converter</h1>
+        <form id="timeForm">
+            <label for="days">Days:</label>
+            <input type="number" id="days" name="days" min="0" required>
+            <label for="hours">Hours:</label>
+            <input type="number" id="hours" name="hours" min="0" max="23" required>
+            <label for="minutes">Minutes:</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="59" required>
+            <button type="submit">Convert to Seconds</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="t.js"></script>
+</body>
+</html>

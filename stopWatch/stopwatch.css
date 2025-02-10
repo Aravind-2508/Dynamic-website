@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    50% {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+    }
+    100% {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+}
+
+.stopwatch {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+.time {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: textFadeIn 2s ease-in-out;
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+#startStop {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#reset {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#lap {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.laps {
+    margin-top: 20px;
+}
+
+.lap {
+    font-size: 1.2em;
+    margin: 5px 0;
+    animation: lapFadeIn 1s ease-in-out;
+}
+
+@keyframes lapFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
